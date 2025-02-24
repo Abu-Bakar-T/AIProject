@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f6fa;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input[type="text"],
+            input[type="number"] {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>House Price Prediction</h2>
+        <form action="/predict" method="post">
+            <input type="number" name="bedrooms" placeholder="Number of bedrooms" required>
+            <input type="number" name="bathrooms" placeholder="Number of bathrooms" required>
+            <input type="number" name="living_in_m2" placeholder="Living space in square meters" required>
+            <input type="text" name="nice_view" placeholder="Nice view? (1 for Yes, 0 for No)" required>
+            <input type="text" name="perfect_condition" placeholder="Perfect condition? (1 for Yes, 0 for No)" required>
+            <input type="number" name="grade" placeholder="Grade (1 to 5)" required>
+            <input type="text" name="has_basement" placeholder="Has basement? (1 for Yes, 0 for No)" required>
+            <input type="text" name="renovated" placeholder="Renovated? (1 for Yes, 0 for No)" required>
+            <input type="text" name="has_lavatory" placeholder="Has lavatory? (1 for Yes, 0 for No)" required>
+            <input type="text" name="single_floor" placeholder="Single floor? (1 for Yes, 0 for No)" required>
+            <input type="number" name="month" placeholder="Month of sale (1 to 12)" required>
+            <input type="number" name="quartile_zone" placeholder="Quartile zone (1 to 4)" required>
+            <button type="submit">Predict Price</button>
+        </form>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+</body>
+
+</html>
