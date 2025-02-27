@@ -27,12 +27,19 @@ This project is built using **Python**, with model training and deployment on **
 
 ## 📁 Project Structure  
 📂 house-price-app/
+
 │── 📂 static/          # Static assets (CSS, images)
+
 │── 📂 templates/       # HTML templates
+
 │── 📄 app.py           # Flask application
+
 │── 📄 house_price_model.pkl  # Pre-trained model
+
 │── 📄 scaler.pkl       # Scaler for feature normalization
+
 │── 📄 requirements.txt # Required dependencies
+
 │── 📄 README.md        # Project documentation
 
 
