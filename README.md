@@ -71,14 +71,20 @@ This project is built using **Python**, with model training and deployment on **
 ## 🚀 How to Run the Project Locally  
 
 ### 1️⃣ Clone the Repository  
+```
 git clone https://github.com/your-username/house-price-app.git
 cd house-price-app
+```
 
 ### 2️⃣ Clone the Repository  
+```
 pip install -r requirements.txt
+```
 
 ### 3️⃣ Clone the Repository  
+```
 python app.py
+```
 📌 The web app will be available at: http://127.0.0.1:5000/
 
 ---
