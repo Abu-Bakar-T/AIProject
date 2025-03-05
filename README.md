@@ -76,12 +76,12 @@ git clone https://github.com/your-username/house-price-app.git
 cd house-price-app
 ```
 
-### 2️⃣ Clone the Repository  
+### 2️⃣ Install dependencies  
 ```
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Clone the Repository  
+### 3️⃣ Run Application
 ```
 python app.py
 ```
